@@ -1,0 +1,80 @@
+<html>
+			<head>
+		<script>
+	"use strict";
+	
+	function fDifi () {
+	var vgA;
+	var vgB;
+	var va;
+	var vb;
+	var vKA;
+	var vKB;
+	var vg;
+	var vp;
+	var vAusgabe;
+	var vX;
+	var vY;
+	var vAnzahl;
+	
+	vX = 1;
+	
+	vg = document.getElementById ("idg.value;
+	vg = parseFloat(vg);
+	
+	vp = document.getElementById ("idp").value;
+	vp = parseFloat(vp);
+	
+	va = document.getElementById ("ida").value;
+	va = parseFloat(va);
+	
+	vb = document.getElementById ("idb").value;
+	vb = parseFloat(vb);
+	
+	vgA = Math.pow(vg, va) % vp;
+	vgB = Math.pow(vg, vb) % vp;
+	vKB = Math.pow(vgB, va) % vp;
+	vKA = Math.pow(vgA, vb) % vp;
+	
+vAnzahl = document.getElementById("idAnzahl").value;
+	
+	vAusgabe = "öffentlicher Schlüssel Alive:" + vgA;
+	vAusgabe = vAusgabe + "öffentlicher Schlüssel Bob:" + vgb;
+	vAusgabe = vAusgabe + "<br>" + "---------------" + "<br>";
+	vAusgabe = vAusgabe + "<br>" + Generierter Schlüssel K A.:" + vKA;
+	vAusgabe = vAusgabe + "<br>" + Generierter Schlüssel K B:."+ vKB
+	
+	vAusgabe = vAusgabe + "";
+	vAusgabe = vAusgabe +"<br>Jetzt kommt eine Wertabelle...";
+	
+	vAusgabe = vAusgabe +"<table border=1>";
+	vAusgabe = vAusgabe +"<tr><th>x</td><th>f(x)=x + 2</td></tr>";
+	
+while (vX <=vAnzahl) {
+
+vY = vX+2;
+
+vAusgabe = vAusgabe + "</table>";
+document.getElementById("idAusgabe").innerHTML = vAusgabe;
+}
+		</script>
+<tiitle>Difi</tiitle>
+			</head>
+			<body>
+		<h1> Berechnung vom Schlüssel K nach Diffie_hellman</h1>
+		<br> 1. Alice und Bob einigen sich auf : <br>
+		g = <input id="idg"type" value="2" />
+		<br> p = <input id ="idp" type="text" value="13" />
+		<br>-----------------------<br>
+		<br> 2. Alice wählt die Geheime Zahl a: <br>
+		a =<input id="ida" type="text" value="5" />
+		<br> 3. BOB wählt die Geheime Zahl b: <br>
+		b =<input id="idb" type="text" value="8" />
+		
+		<br> wie viele berechnung? <input id="idAnzahl" type="idAnzahl" type="text" value="5" />
+		
+		<button onClick="fDifi();">Berechnen</button>
+		<div id="idAusgabe"></div>
+		
+		</body>
+		</html>
